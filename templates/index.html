@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="mb-4">
+  <strong>Filter by tags:</strong>
+  {% for tag in all_tags %}
+    {% set active = tag in selected_tags %}
+    <a href="/?tags={{ (selected_tags + [tag]) | join(',') if not active else (selected_tags | reject('equalto', tag) | list | join(',')) }}"
+       class="badge {% if active %}bg-primary{% else %}bg-secondary{% endif %} me-1">
+      {{ tag }}
+    </a>
+  {% endfor %}
+  {% if selected_tags %}
+    <a href="/" class="badge bg-light text-dark border">Clear All</a>
+  {% endif %}
+</div>
+
+<div class="row">
+  {% for repo in repos %}
+  <div class="col-md-6 mb-4">
+    <div class="card h-100 shadow-sm">
+      <div class="card-body d-flex flex-column">
+        <!-- Top content -->
+        <div>
+          <h5 class="card-title">{{ repo.name }}</h5>
+          <p class="card-text">{{ repo.description }}</p>
+        </div>
+
+        <!-- Bottom-aligned content -->
+        <div class="mt-auto">
+          <div class="mb-2">
+            {% for tag in repo.tags %}
+                <a href="/?tag={{ tag }}" class="badge bg-secondary me-1">{{ tag }}</a>
+            {% endfor %}
+          </div>
+          <div class="mb-2">
+            {% for badge in repo.badges %}
+              <img src="{{ badge }}" alt="badge" class="me-2" />
+            {% endfor %}
+          </div>
+
+          {% if not repo.private %}
+            <a href="{{ repo.url }}" class="btn btn-primary" target="_blank">View on GitHub</a>
+          {% else %}
+            <span class="btn btn-warning disabled">Private / WIP</span>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

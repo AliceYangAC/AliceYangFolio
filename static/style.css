@@ -1,0 +1,43 @@
+body {
+  background-color: #eaedef;
+}
+
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 10px;
+}
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.btn-primary {
+  background-color: #24292e;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #0366d6;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+.btn.disabled {
+  pointer-events: none;
+  opacity: 1;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+.mt-auto {
+  margin-top: auto;
+}
+.badge {
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+.badge:hover {
+  background-color: #0d6efd; /* Bootstrap primary */
+  color: white;
+  transform: scale(1.05);
+}
+
+

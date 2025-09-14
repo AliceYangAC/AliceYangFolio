@@ -1,0 +1,17 @@
+[
+  {
+    "name": "WhisperSRTube",
+    "description": "A Python-based tool with a GUI to allow the user to download a YouTube video, transcribe its audio with OpenAI Whisper, auto-detect the language of and translate the transcript into another chosen language, generates an SRT subtitle file, and adds the SRT subtitles back into the video.",
+    "url": "https://github.com/AliceYangAC/WhisperSRTube",
+    "tags": ["Python", "Whisper", "Torch", "Tkinter"],
+    "private": false
+  },
+  {
+    "name": "AI-ccess",
+    "description": "Work-in-progress Python & ML-enabled (PyTorch) app for dynamically adjusting web UI elements (ie. generative alt text) according to accessibility needs.",
+    "url": "https://github.com/AliceYangAC/AIccess",
+    "tags": ["Python", "Torch", "Pydantic", "Uvicorn"],
+    "private": true
+  }
+]
+
