@@ -31,19 +31,6 @@
   </footer>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const toggle = document.querySelector(".filter-toggle");
-      const options = document.querySelector(".filter-options");
-
-      toggle.addEventListener("click", () => {
-        options.classList.toggle("open");
-        toggle.textContent = options.classList.contains("open")
-          ? "Filter by tags ▴"
-          : "Filter by tags ▾";
-      });
-    });
-  </script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
       const text = "hi, i'm alice!";
       const typedText = document.getElementById("typed-text");
       const cursor = document.getElementById("cursor");
