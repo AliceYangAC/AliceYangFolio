@@ -11,7 +11,7 @@
     "description": "Work-in-progress Python & ML-enabled (PyTorch) app for dynamically adjusting web UI elements (ie. generative alt text) according to accessibility needs.",
     "url": "https://github.com/AliceYangAC/AIccess",
     "tags": ["Python", "Torch", "Pydantic", "Uvicorn"],
-    "private": true
+    "private": false
   }
 ]
 
