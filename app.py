@@ -1,7 +1,8 @@
 from flask import Flask, render_template, request, json
 import os
 
-port = int(os.environ.get("PORT", 5000))
+port = int(os.environ.get("PORT", 10000))  # fallback to 10000 if PORT isn't set
+
 app = Flask(__name__)
 
 @app.route("/")
