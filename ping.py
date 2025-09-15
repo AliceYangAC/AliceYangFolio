@@ -1,7 +1,7 @@
 import requests
 
 URLS = [
-    "https://your-app.onrender.com"  # Replace with your actual Render URL
+    "https://aliceyangfolio.onrender.com/"  # Replace with your actual Render URL
 ]
 
 for url in URLS:
