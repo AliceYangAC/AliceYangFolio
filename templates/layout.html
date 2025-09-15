@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- ✅ Enables mobile responsiveness -->
   <link rel="icon" href="{{ url_for('static', filename='icon.jpg') }}" type="image/jpg">
   <title>{{ title or "Project Portfolio" }}</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='lofi.css') }}">
@@ -28,6 +29,19 @@
     <p>Built on Flask</p>
     <p>Deployed on Render</p>
   </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggle = document.querySelector(".filter-toggle");
+      const options = document.querySelector(".filter-options");
+
+      toggle.addEventListener("click", () => {
+        options.classList.toggle("open");
+        toggle.textContent = options.classList.contains("open")
+          ? "Filter by tags ▴"
+          : "Filter by tags ▾";
+      });
+    });
+  </script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const text = "hi, i'm alice!";
@@ -61,6 +75,5 @@
       type();
     });
   </script>
-
 </body>
 </html>

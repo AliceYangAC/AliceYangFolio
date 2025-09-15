@@ -1,3 +1,4 @@
+/* === Base Layout === */
 body {
   font-family: 'Courier New', Courier, monospace;
   background-color: #fdfdfd;
@@ -16,20 +17,24 @@ hr {
   margin: 1rem 0;
 }
 
+/* === Card Grid === */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Exactly 2 columns */
-  gap: 3rem 1.5rem; /* vertical gap first, then horizontal */
+  grid-template-columns: repeat(2, 1fr); /* Two columns on desktop */
+  gap: 3rem 1.5rem;
   width: 100%;
   padding: 1rem 2rem;
   box-sizing: border-box;
 }
 
-.card-title {
-  font-weight: bold;
-  font-size: 1.2rem;
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr; /* One column on mobile */
+    gap: 4rem 0;
+  }
 }
 
+/* === Card Styling === */
 .card {
   display: flex;
   flex-direction: column;
@@ -49,7 +54,12 @@ hr {
   display: flex;
   flex-direction: column;
   flex: 1;
-  overflow: hidden
+  overflow: hidden;
+}
+
+.card-title {
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .card h3, .card h5 {
@@ -61,6 +71,7 @@ hr {
   margin-top: auto;
 }
 
+/* === Badge Styling === */
 .badge {
   display: inline-block;
   padding: 0.3rem 0.6rem;
@@ -71,28 +82,25 @@ hr {
   cursor: pointer;
 }
 
-/* Active tag (selected) */
+.badge:hover {
+  background-color: #ccc;
+}
+
 .active-tag {
   background-color: #222;
   color: #fff;
   border-color: #222;
 }
 
-/* Inactive tag */
 .inactive-tag {
   background-color: #eee;
   color: #222;
 }
 
-/* Clear All tag */
 .clear-tag {
   background-color: #fff;
   color: #000;
   border: 1px dashed #aaa;
-}
-
-.badge:hover {
-  background-color: #ccc;
 }
 
 .badge-card {
@@ -104,9 +112,10 @@ hr {
   border: 1px solid #aaa;
   font-size: 0.8rem;
   text-decoration: none;
-  pointer-events: none
+  pointer-events: none;
 }
 
+/* === Filter Bar === */
 .filter-bar {
   position: sticky;
   top: 0;
@@ -116,6 +125,44 @@ hr {
   border-bottom: 1px dashed #aaa;
 }
 
+/* Toggle button for mobile dropdown */
+.filter-toggle {
+  display: none;
+  font-weight: bold;
+  padding: 0.5rem;
+  border: 1px dashed #aaa;
+  background-color: #fdfdfd;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+
+/* Filter options container */
+.filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* === Mobile Dropdown Behavior === */
+@media (max-width: 768px) {
+  .filter-toggle {
+    display: block; /* Show toggle button on mobile */
+  }
+
+  .filter-options {
+    display: none; /* Hide filters by default */
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .filter-options.open {
+    display: flex; /* Show filters when toggled open */
+  }
+}
+
+/* === Buttons === */
 .btn {
   display: inline-block;
   padding: 0.4rem 0.8rem;
@@ -130,6 +177,7 @@ hr {
   background-color: #bbb;
 }
 
+/* === Miscellaneous === */
 .profile-pic {
   width: 100px;
   height: 100px;
@@ -166,11 +214,3 @@ i.fab, i.fas {
   font-weight: bold;
   visibility: visible;
 }
-
-
-
-
-
-
-
-
