@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- ✅ Enables mobile responsiveness -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Enables mobile responsiveness -->
   <link rel="icon" href="{{ url_for('static', filename='icon.jpg') }}" type="image/jpg">
   <title>{{ title or "Project Portfolio" }}</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='lofi.css') }}">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="d-flex flex-column min-vh-100">
   <header>
@@ -29,6 +28,7 @@
     <p>Built on Flask</p>
     <p>Deployed on Render</p>
   </footer>
+  <!-- Script for typewriter effect on introduction on load -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const text = "hi, i'm alice!";
@@ -56,9 +56,8 @@
             clearInterval(blinkInterval);
             cursor.style.visibility = "hidden";
           }
-        }, 500); // Faster blink speed for snappier feel
+        }, 500); // - for slower blink, + for faster
       };
-
       type();
     });
   </script>

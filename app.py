@@ -31,6 +31,7 @@ def index():
 
     return render_template("index.html", repos=repos, all_tags=all_tags, selected_tags=selected_tags)
 
+# CRON ping endpoint for cron-jobs
 @app.route("/ping")
 def ping():
     return "OK"

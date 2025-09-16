@@ -1,5 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
+<!-- Filter bar -->
 <div class="filter-bar mb-4" id="tag-filters">
   <strong>Filter by tags:</strong>
   {% for tag in all_tags %}
@@ -13,6 +14,7 @@
     <a href="/" class="badge bg-light text-dark border">Clear All</a>
   {% endif %}
 </div>
+<!-- Project cards -->
 <div class="card-grid">
   {% for repo in repos %}
   <div class="card">

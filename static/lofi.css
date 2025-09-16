@@ -20,7 +20,7 @@ hr {
 /* === Card Grid === */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two columns on desktop */
+  grid-template-columns: repeat(2, 1fr);
   gap: 3rem 1.5rem;
   width: 100%;
   padding: 1rem 2rem;
@@ -28,9 +28,14 @@ hr {
 }
 
 @media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
   .card-grid {
-    grid-template-columns: 1fr; /* One column on mobile */
+    grid-template-columns: 1fr;
     gap: 4rem 0;
+    padding: 0 1rem;
   }
 }
 
@@ -145,20 +150,19 @@ hr {
   gap: 0.5rem;
 }
 
-/* === Mobile Dropdown Behavior === */
 @media (max-width: 768px) {
   .filter-toggle {
-    display: block; /* Show toggle button on mobile */
+    display: block;
   }
 
   .filter-options {
-    display: none; /* Hide filters by default */
+    display: none;
     flex-direction: column;
     gap: 0.5rem;
   }
 
   .filter-options.open {
-    display: flex; /* Show filters when toggled open */
+    display: flex;
   }
 }
 
@@ -189,15 +193,6 @@ hr {
 .footer {
   text-align: center;
   padding: 1rem 0;
-}
-
-#tag-filters {
-  margin-bottom: 1rem;
-}
-
-i.fab, i.fas {
-  font-size: 1rem;
-  color: #333;
 }
 
 .typewriter {
