@@ -17,6 +17,10 @@ hr {
   margin: 1rem 0;
 }
 
+a {
+  color: #222;
+}
+
 /* === Card Grid === */
 .card-grid {
   display: grid;
@@ -180,6 +184,71 @@ hr {
   color: #222;
   font-weight: bold;
   visibility: visible;
+}
+
+/* === Contact Form === */
+#contact-form {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #fff;
+  border: 1px dashed #aaa;
+  padding: 2rem;
+  margin-top: 2rem;
+  box-shadow: 4px 4px 0 #ccc;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#contact-form label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid #aaa;
+  background-color: #fdfdfd;
+  font-family: inherit;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+}
+
+#contact-form textarea {
+  resize: vertical;
+}
+
+#submit-btn {
+  background-color: #ddd;
+  border: 1px solid #999;
+  padding: 0.5rem 1rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+#submit-btn:hover {
+  background-color: #bbb;
+}
+
+#form-response {
+  margin-top: 1rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  color: #222;
+  border-top: 1px dashed #aaa;
+  padding-top: 1rem;
 }
 
 /* === Mobile Responsive Design === */

@@ -10,12 +10,15 @@
 </head>
 <body class="d-flex flex-column min-vh-100">
   <header>
-    <img src="{{ url_for('static', filename='icon.jpg') }}" alt="Profile Picture" class="profile-pic">
+    <a href="/">
+      <img src="{{ url_for('static', filename='icon.jpg') }}" alt="Profile Picture" class="profile-pic">
+    </a>
     <br>
     <h1 class="typewriter">
       <span id="typed-text"></span><span id="cursor">|</span>
     </h1>
     <p>personal project portfolio</p>
+    <a href="/contact">contact me</a>
     <hr>
   </header>
 
@@ -62,5 +65,52 @@
       type();
     });
   </script>
+  <script>
+    document.getElementById("submit-btn").addEventListener("click", function () {
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+      const responseBox = document.getElementById("form-response");
+
+      // Basic validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!name || !email || !message) {
+        responseBox.textContent = "Please fill out all fields.";
+        return;
+      }
+
+      if (!emailRegex.test(email)) {
+        responseBox.textContent = "Please enter a valid email address.";
+        return;
+      }
+
+      const data = {
+        name: name,
+        email: email,
+        message: message
+      };
+
+      fetch("https://formspree.io/f/mgvljwko", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(data)
+      })
+      .then(response => {
+        if (response.ok) {
+          responseBox.textContent = "Thanks for your message! I'll be in touch soon.";
+          document.getElementById("contact-form").reset?.(); // optional if using form tag
+        } else {
+          responseBox.textContent = "Oops! Something went wrong.";
+        }
+      })
+      .catch(() => {
+        responseBox.textContent = "Network error. Please try again later.";
+      });
+    });
+    </script>
 </body>
 </html>

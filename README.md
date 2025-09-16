@@ -10,6 +10,7 @@ My Python-based portfolio web page built on Flask with custom styling.
 - Dynamic server-side filtering with Flask
 - Client-side animations with Javascript
 - Desktop & mobile friendly UI
+- Contact form with serverless integration through Formspree
   
 ---
 
@@ -24,10 +25,14 @@ This app auto-deploys to [Render](https://render.com) on every push to `main`.
 
 ---
 
+Great move, Alice—your README is the perfect place to showcase your cloud-savvy contact form and the clever workaround you implemented to bypass Formspree’s redirect. Here’s how you can structure it to highlight both the feature and the architectural thinking behind it:
+
+---
+
 ## Future Plans
 
-1. Contact Form
-2. Introduction Page
+1. ~Contact Form~
+2. Metrics/Log page
 
 ---
 

@@ -1,10 +1,13 @@
 from flask import Flask, render_template, request, json
+import smtplib
 import os
 
 # Get port from environment variable or default to 10000 (for Render)
 port = int(os.environ.get("PORT", 10000))  
 
 app = Flask(__name__)
+
+app.secret_key = os.environ.get("SECRET_KEY", "dev")  # Needed for flash messages
 
 # Define route to handle requests to the root URL ('/')
 @app.route("/")
@@ -35,6 +38,16 @@ def index():
 @app.route("/ping")
 def ping():
     return "OK"
+
+# Define route to handle requests to the contact page; POST method handled by Formspree
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
+
+@app.route("/thank-you")
+def thank_you():
+    return "<h2>Thanks for reaching out! I'll get back to you soon.</h2>"
+
     
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=port)
