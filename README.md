@@ -6,7 +6,8 @@ My Python-based portfolio web page built on Flask with custom styling.
 
 ## Features
 
-- Dynamic project filtering with Javascript
+- Dynamic server-side filtering with Flask
+- Client-side animations with Javascript
 - Desktop & mobile friendly UI
   
 ---
