@@ -1,17 +1,24 @@
 [
   {
     "name": "WhisperSRTube",
-    "description": "A Python-based tool with a GUI to allow the user to download a YouTube video, transcribe its audio with OpenAI Whisper, auto-detect the language of and translate the transcript into another chosen language, and burn the SRT subtitles back into the video.",
+    "description": "A subtitling tool I made because I found Youtube's current auto-translation and captioning to be temperamental at best. Built with Python on Tkinter.",
     "url": "https://github.com/AliceYangAC/WhisperSRTube",
-    "tags": ["Python", "Fun!", "GUI"],
+    "tags": ["Python", "For Fun!"],
     "private": false
   },
   {
     "name": "AI-ccess",
-    "description": "A Python-based and ML-powered app that takes advantage of models from Transformers to explore accessibility potential. Interprets voice commands and generates image captions for users with diverse accessibility needs. Is in active development with plans for future tools like adaptive user interfaces.",
+    "description": "An experimental project on how machine learning can be used to improve web accessibility. Note that the project structure is ambiguous and lacks clear client-server dilineation; currently being refactored on a repo branch to learn how to align with cloud-native best practices. Built with Python on FastAPI and Flask",
     "url": "https://github.com/AliceYangAC/AIccess",
-    "tags": ["Python", "Explore", "Web App"],
+    "tags": ["Python", "For Testing"],
     "private": false
-  }
+  },
+  {
+    "name": "AliceYangFolio",
+    "description": "This landing page! Built with Python on Flask and deployed on Render.",
+    "url": "https://github.com/AliceYangAC/WhisperSRTube",
+    "tags": ["Python", "For Fun!"],
+    "private": false
+  },
 ]
 
