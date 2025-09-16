@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, json
-import smtplib
 import os
 
 # Get port from environment variable or default to 10000 (for Render)
@@ -43,11 +42,6 @@ def ping():
 @app.route("/contact")
 def contact():
     return render_template("contact.html")
-
-@app.route("/thank-you")
-def thank_you():
-    return "<h2>Thanks for reaching out! I'll get back to you soon.</h2>"
-
     
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=port)
