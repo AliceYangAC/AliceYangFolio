@@ -27,22 +27,6 @@ hr {
   box-sizing: border-box;
 }
 
-@media (max-width: 768px) {
-  body {
-    padding: 1rem;
-  }
-
-  main {
-    padding-bottom: 1rem;
-  }
-
-  .card-grid {
-    grid-template-columns: 1fr;
-    gap: 4rem 0;
-    padding: 0 1rem;
-  }
-}
-
 /* === Card Styling === */
 .card {
   display: flex;
@@ -129,7 +113,7 @@ hr {
   position: sticky;
   top: 0;
   background-color: #fdfdfd;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem 1rem 2rem; 
   z-index: 100;
   border-bottom: 1px dashed #aaa;
 }
@@ -155,6 +139,26 @@ hr {
 }
 
 @media (max-width: 768px) {
+
+  body {
+    padding: 1rem;
+  }
+
+  main {
+    padding-bottom: 1rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem 0;
+    padding: 0 1rem;
+  }
+  
+  .filter-bar {
+    margin-bottom: 1rem;
+    padding: 0.5rem 1.5rem 1rem 1.5rem; 
+  }
+
   .filter-toggle {
     display: block;
   }
