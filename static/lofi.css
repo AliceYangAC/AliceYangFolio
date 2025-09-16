@@ -32,6 +32,10 @@ hr {
     padding: 1rem;
   }
 
+  main {
+    padding-bottom: 1rem;
+  }
+
   .card-grid {
     grid-template-columns: 1fr;
     gap: 4rem 0;
