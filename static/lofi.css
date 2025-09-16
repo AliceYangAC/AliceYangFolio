@@ -21,6 +21,10 @@ a {
   color: #222;
 }
 
+a:hover {
+  color: #838383;
+}
+
 /* === Card Grid === */
 .card-grid {
   display: grid;
