@@ -138,42 +138,6 @@ hr {
   gap: 0.5rem;
 }
 
-@media (max-width: 768px) {
-
-  body {
-    padding: 1rem;
-  }
-
-  main {
-    padding-bottom: 1rem;
-  }
-
-  .card-grid {
-    grid-template-columns: 1fr;
-    gap: 4rem 0;
-    padding: 0 1rem;
-  }
-  
-  .filter-bar {
-    margin-bottom: 1rem;
-    padding: 0.5rem 1.5rem 1rem 1.5rem; 
-  }
-
-  .filter-toggle {
-    display: block;
-  }
-
-  .filter-options {
-    display: none;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .filter-options.open {
-    display: flex;
-  }
-}
-
 /* === Buttons === */
 .btn {
   display: inline-block;
@@ -216,4 +180,40 @@ hr {
   color: #222;
   font-weight: bold;
   visibility: visible;
+}
+
+/* === Mobile Responsive Design === */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  main {
+    padding-bottom: 1rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem 0;
+    padding: 0 1rem;
+  }
+  
+  .filter-bar {
+    margin-bottom: 1rem;
+    padding: 0.5rem 1.5rem 1rem 1.5rem; 
+  }
+
+  .filter-toggle {
+    display: block;
+  }
+
+  .filter-options {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .filter-options.open {
+    display: flex;
+  }
 }
