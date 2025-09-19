@@ -1,3 +1,5 @@
+// JavaScript for handling contact form submission via Formspree; includes validation and user feedback
+// Does not use a traditional form to avoid redirect on submission
 document.getElementById("submit-btn").addEventListener("click", function () {
   const name = document.getElementById("name").value.trim();
   const email = document.getElementById("email").value.trim();
