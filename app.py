@@ -36,7 +36,7 @@ def index():
 # CRON ping endpoint for cron-jobs
 @app.route("/ping")
 def ping():
-    return "OK", 200
+    return "", 200
 
 # Define route to handle requests to the contact page; POST method handled by Formspree
 @app.route("/contact")
