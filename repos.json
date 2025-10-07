@@ -11,7 +11,7 @@
     "description": "An experimental project on how machine learning can be used to improve web accessibility. Note that the project structure is ambiguous and lacks clear client-server delineation; currently being refactored on a repo branch to learn how to align with cloud-native best practices. Built with Python on FastAPI and Flask.",
     "url": "https://github.com/AliceYangAC/AIccess",
     "tags": ["Python", "Sandbox"],
-    "private": false
+    "private": true
   },
   {
     "name": "AliceYangFolio",
