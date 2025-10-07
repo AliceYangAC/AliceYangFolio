@@ -14,6 +14,13 @@
     "private": true
   },
   {
+    "name": "EDA-Ottawa-Traffic",
+    "description": "Nokia EDA (Event Driven Automation) platform enables its users to get real-time data w/o configuring any networking infrastructure. I am exploring the playground EDA toolkit filtering public Ottawa traffic data flows into a stack powered by Azure data processing services, Grafana and Kafka.",
+    "url": "https://github.com/AliceYangAC/EDA-ottawa-traffic",
+    "tags": ["Python", "Sandbox"],
+    "private": true
+  },
+  {
     "name": "AliceYangFolio",
     "description": "This landing page! Built with Python on Flask and deployed on Render.",
     "url": "https://github.com/AliceYangAC/AliceYangFolio",
