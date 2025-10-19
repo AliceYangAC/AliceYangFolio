@@ -1,38 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Enables mobile responsiveness -->
-  <link rel="icon" href="{{ url_for('static', filename='icon.jpg') }}" type="image/jpg">
-  <title>{{ title or "Project Portfolio" }}</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='lofi.css') }}">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body class="d-flex flex-column min-vh-100">
-  <header>
-    <a href="/">
-      <img src="{{ url_for('static', filename='icon.jpg') }}" alt="Profile Picture" class="profile-pic">
-    </a>
-    <br>
-    <h1 class="typewriter">
-      <span id="typed-text"></span><span id="cursor">|</span>
-    </h1>
-    <p>personal project portfolio</p>
-    <a href="/contact">contact me</a>
-    <hr>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Enables mobile responsiveness -->
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='icon.jpg') }}"
+      type="image/jpg"
+    />
+    <title>{{ title or "Project Portfolio" }}</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='lofi.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <header>
+      <a href="/">
+        <img
+          src="{{ url_for('static', filename='icon.jpg') }}"
+          alt="Profile Picture"
+          class="profile-pic"
+        />
+      </a>
+      <br />
+      <h1 class="typewriter">
+        <span id="typed-text"></span><span id="cursor">|</span>
+      </h1>
+      <p>personal project portfolio</p>
+      <a href="/contact">contact me</a>
+      <hr />
+    </header>
 
-  <main class="flex-grow-1">
-    {% block content %}{% endblock %}
-  </main>
+    <main class="flex-grow-1">{% block content %}{% endblock %}</main>
 
-  <footer class="footer">
-    <hr>
-    <p>&copy; 2025 Alice Yang</p>
-    <p>Built on Flask</p>
-    <p>Deployed on Azure Web App Service</p>
-  </footer>
-  <!-- Script for typewriter effect on introduction on load -->
-  <script src="{{ url_for('static', filename='typewriter.js') }}" defer></script>
-</body>
+    <footer class="footer">
+      <hr />
+      <p>&copy; 2025 Alice Yang</p>
+      <p>Built on Flask</p>
+      <p>Deployed on Vercel</p>
+    </footer>
+    <!-- Script for typewriter effect on introduction on load -->
+    <script
+      src="{{ url_for('static', filename='typewriter.js') }}"
+      defer
+    ></script>
+  </body>
 </html>
