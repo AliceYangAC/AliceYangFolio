@@ -15,7 +15,7 @@
   },
   {
     "name": "AliceYangFolio",
-    "description": "This landing page! Built with Python on Flask and deployed on Render.",
+    "description": "This landing page! Built with Python on Flask and deployed on Vercel.",
     "url": "https://github.com/AliceYangAC/AliceYangFolio",
     "tags": ["Python", "Fun!"],
     "private": false
