@@ -7,18 +7,11 @@
     "private": false
   },
   {
-    "name": "AI-ccess",
-    "description": "An experimental project on how machine learning can be used to improve web accessibility. Note that the project structure is ambiguous and lacks clear client-server delineation; currently being refactored on a repo branch to learn how to align with cloud-native best practices. Built with Python on FastAPI and Flask.",
-    "url": "https://github.com/AliceYangAC/AIccess",
-    "tags": ["Python", "Sandbox"],
-    "private": true
-  },
-  {
     "name": "EDA-Ottawa-Traffic",
-    "description": "Nokia EDA (Event Driven Automation) platform enables its users to get real-time data w/o configuring any networking infrastructure. I am exploring the playground EDA toolkit filtering public Ottawa traffic data flows into a stack powered by Azure data processing services, Grafana and Kafka.",
+    "description": "Nokia EDA (Event Driven Automation) platform enables its users to get real-time data w/o configuring any networking infrastructure. I am exploring the playground EDA toolkit filtering public Ottawa traffic data flows into a stack powered by Azure data processing services to visualize on Grafana.",
     "url": "https://github.com/AliceYangAC/EDA-ottawa-traffic",
     "tags": ["Python", "Sandbox"],
-    "private": true
+    "private": false
   },
   {
     "name": "AliceYangFolio",
