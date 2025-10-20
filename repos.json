@@ -8,8 +8,8 @@
   },
   {
     "name": "EDA-Ottawa-Traffic",
-    "description": "Nokia EDA (Event Driven Automation) platform enables its users to get real-time data w/o configuring any networking infrastructure. I am exploring the playground EDA toolkit filtering public Ottawa traffic data flows into a stack powered by Azure data processing services to visualize on Grafana.",
-    "url": "https://github.com/AliceYangAC/EDA-ottawa-traffic",
+    "description": "This project is an Azure-based traffic ingestion system focused on real-time traffic events in Ottawa. It is designed to fetch, filter, and store high-priority traffic events using Azure Functions and Azure Table Storage to visualize and analyze patterns through Grafana dashboard in future integration. Note: This project is no longer integrated with Nokia EDA, but future integration may be considered.",
+    "url": "https://github.com/AliceYangAC/EDAzure-ottawa-traffic",
     "tags": ["Python", "Sandbox"],
     "private": false
   },
