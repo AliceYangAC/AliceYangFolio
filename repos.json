@@ -7,9 +7,9 @@
     "private": false
   },
   {
-    "name": "EDA-Ottawa-Traffic",
-    "description": "This project is an Azure-based traffic ingestion system focused on real-time traffic events in Ottawa. It is designed to fetch, filter, and store high-priority traffic events using Azure Functions and Azure Table Storage to visualize and analyze patterns through Grafana dashboard in future integration. Note: This project is no longer integrated with Nokia EDA, but future integration may be considered.",
-    "url": "https://github.com/AliceYangAC/EDAzure-ottawa-traffic",
+    "name": "Ottawa Traffic Dashboard",
+    "description": "This project is an Azure-based traffic ingestion system focused on real-time traffic events in Ottawa. It is designed to fetch, display (stateless through Redis) and store traffic events using Azure Functions, Azure Table Storage, and Dash. Note: This project is no longer integrated with Nokia EDA, but future integration may be considered.",
+    "url": "https://github.com/AliceYangAC/ottawa-traffic-dashboard",
     "tags": ["Python", "Sandbox"],
     "private": false
   },
