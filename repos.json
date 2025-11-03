@@ -3,29 +3,41 @@
     "name": "Reddit - Social Media Scraper",
     "description": "This project is a pipeline for scraping Reddit posts and comments with Go, and analyzing sentiment using both VADER and transformer-based models with Python. Sentiment analysis results are persisted to Azure Blob and Table Storage for future analytics implementation. (via Azurite for local development)",
     "url": "https://github.com/AliceYangAC/social-media-scraper",
-    "tags": ["Python", "Sandbox"],
+    "tags": [
+      "Python",
+      "Golang",
+      "Sandbox"
+    ],
     "private": false
   },
   {
     "name": "Ottawa Traffic Dashboard",
     "description": "This project is an Azure-based traffic ingestion system focused on real-time traffic events in Ottawa. It is designed to fetch, display (stateless through Redis) and store traffic events using Azure Functions, Azure Table Storage, and Dash. Note: This project is no longer integrated with Nokia EDA, but future integration may be considered.",
     "url": "https://github.com/AliceYangAC/ottawa-traffic-dashboard",
-    "tags": ["Python", "Sandbox"],
+    "tags": [
+      "Python",
+      "Sandbox"
+    ],
     "private": false
   },
   {
     "name": "AliceYangFolio",
     "description": "This landing page! Built with Python on Flask and deployed on Vercel.",
     "url": "https://github.com/AliceYangAC/AliceYangFolio",
-    "tags": ["Python", "Fun!"],
+    "tags": [
+      "Python",
+      "Fun!"
+    ],
     "private": false
   },
   {
     "name": "WhisperSRTube",
     "description": "A subtitling tool I made because I found Youtube's current auto-translation and captioning to be temperamental at best. Built with Python on Tkinter.",
     "url": "https://github.com/AliceYangAC/WhisperSRTube",
-    "tags": ["Python", "Fun!"],
+    "tags": [
+      "Python",
+      "Fun!"
+    ],
     "private": false
   }
 ]
-
