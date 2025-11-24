@@ -1,0 +1,15 @@
+{% extends "layout.html" %} {% block content %}
+<!-- Project cards -->
+<div class="card-grid">
+  {% for image_file in image_files %}
+  <div class="card h-100">
+    <img
+      src="{{ url_for('static', filename=image_file) }}"
+      class="card-img-top"
+      alt="{{ image_file }}"
+      style="width: 100%; height: 400px; object-fit: cover"
+    />
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

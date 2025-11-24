@@ -33,10 +33,23 @@ def index():
 
     return render_template("index.html", repos=repos, all_tags=all_tags, selected_tags=selected_tags)
 
-# CRON ping endpoint for cron-jobs
-@app.route("/ping")
-def ping():
-    return "", 200
+# Define route to handle requests to the /art URL
+@app.route("/art")
+def art():
+    # Define the path to the static folder
+    static_folder = os.path.join(app.root_path, 'static')
+    
+    # Get all files starting with "image" and ending with ".png"
+    image_files = [f for f in os.listdir(static_folder) if f.startswith('image') and f.endswith('.png')]
+    
+    # Sort them naturally so image2 comes before image10
+    try:
+        image_files.sort(key=lambda f: int(''.join(filter(str.isdigit, f))))
+    except:
+        image_files.sort() # Fallback if naming is inconsistent
+
+    # Pass this list to your template
+    return render_template('art.html', image_files=image_files)
 
 # Define route to handle requests to the contact page; POST method handled by Formspree
 @app.route("/contact")

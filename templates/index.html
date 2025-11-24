@@ -1,20 +1,19 @@
-{% extends "layout.html" %}
-{% block content %}
+{% extends "layout.html" %} {% block content %}
 <!-- Filter bar -->
 <div class="filter-bar mb-4" id="tag-filters">
   <strong>Filter by tags:</strong>
-  {% for tag in all_tags %}
-    {% set active = tag in selected_tags %}
-    <a href="/?tags={{ (selected_tags + [tag]) | join(',') if not active else (selected_tags | reject('equalto', tag) | list | join(',')) }}"
-       class="badge {% if active %}active-tag{% else %}inactive-tag{% endif %}">
-      {{ tag }}
-    </a>
-  {% endfor %}
-  {% if selected_tags %}
-    <a href="/" class="badge bg-light text-dark border">Clear All</a>
+  {% for tag in all_tags %} {% set active = tag in selected_tags %}
+  <a
+    href="/?tags={{ (selected_tags + [tag]) | join(',') if not active else (selected_tags | reject('equalto', tag) | list | join(',')) }}"
+    class="badge {% if active %}active-tag{% else %}inactive-tag{% endif %}"
+  >
+    {{ tag }}
+  </a>
+  {% endfor %} {% if selected_tags %}
+  <a href="/" class="badge bg-light text-dark border">Clear All</a>
   {% endif %}
 </div>
-<!-- Project cards -->
+<!-- Project cards -->``
 <div class="card-grid">
   {% for repo in repos %}
   <div class="card">
@@ -29,21 +28,23 @@
       <div class="mt-auto">
         <div class="mb-2">
           {% for badge in repo.badges %}
-            <img src="{{ badge }}" alt="badge" class="me-2" />
+          <img src="{{ badge }}" alt="badge" class="me-2" />
           {% endfor %}
         </div>
         <div class="mb-2">
           {% for tag in repo.tags %}
-              <a href="/?tag={{ tag }}" class="badge-card bg-secondary me-1">{{ tag }}</a>
+          <a href="/?tag={{ tag }}" class="badge-card bg-secondary me-1"
+            >{{ tag }}</a
+          >
           {% endfor %}
         </div>
-        <br>
+        <br />
         {% if not repo.private %}
-          <a href="{{ repo.url }}" class="btn btn-primary" target="_blank">
-            View On <i class="fab fa-github"></i>
-          </a>
+        <a href="{{ repo.url }}" class="btn btn-primary" target="_blank">
+          View On <i class="fab fa-github"></i>
+        </a>
         {% else %}
-          <span class="btn btn-warning disabled">Private / WIP</span>
+        <span class="btn btn-warning disabled">Private / WIP</span>
         {% endif %}
       </div>
     </div>

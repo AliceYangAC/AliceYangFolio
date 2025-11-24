@@ -1,12 +1,13 @@
 [
   {
-    "name": "Reddit - Social Media Scraper",
+    "name": "Reddit Social Media Scraper",
     "description": "This project is a pipeline for scraping Reddit posts and comments with Go, and analyzing sentiment using both VADER and transformer-based models with Python. Sentiment analysis results are persisted to Azure Blob and Table Storage for future analytics implementation. (via Azurite for local development)",
     "url": "https://github.com/AliceYangAC/social-media-scraper",
     "tags": [
       "Python",
       "Golang",
-      "Sandbox"
+      "Sandbox",
+      "WIP"
     ],
     "private": false
   },
@@ -16,7 +17,8 @@
     "url": "https://github.com/AliceYangAC/ottawa-traffic-dashboard",
     "tags": [
       "Python",
-      "Sandbox"
+      "Sandbox",
+      "WIP"
     ],
     "private": false
   },
