@@ -1,13 +1,12 @@
 {% extends "layout.html" %} {% block content %}
-<!-- Project cards -->
-<div class="card-grid">
+
+<div class="card-grid" style="grid-template-columns: repeat(3, 1fr)">
   {% for image_file in image_files %}
-  <div class="card h-100">
+  <div class="card">
     <img
       src="{{ url_for('static', filename=image_file) }}"
-      class="card-img-top"
       alt="{{ image_file }}"
-      style="width: 100%; height: 400px; object-fit: cover"
+      style="height: 500px; width: 100%; object-fit: contain; display: block"
     />
   </div>
   {% endfor %}
