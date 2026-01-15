@@ -1,11 +1,30 @@
 [
   {
+    "name": "Best Buy Demo - Microservices Web App (AKS)",
+    "description": "This project is an Azure-based, AKS-orchestrated, containerized microservices-based e-commerce application simulating a Best Buy storefront and admin operations. The application is built using a polyglot microservices architecture designed for cloud-native deployment. The entire system is containerized using Docker, with images hosted on Docker Hub, and orchestrated in production by deploying Azure Kubernetes Service (AKS) using ARM or Terraform IaC templates.",
+    "url": "https://github.com/AliceYangAC/best-buy-microservices-web-app",
+    "tags": [
+      "Python",
+      "JavaScript",
+      "Vue.js",
+      "Golang",
+      "Docker",
+      "Kubernetes",
+      "Terraform",
+      "Azure",
+      "Sandbox",
+      "Project"
+    ],
+    "private": false
+  },
+  {
     "name": "Rideau Canal Skateway - IoT Data Stream Dashboard",
     "description": "This project is an Azure-based, real‑time ice-skating safety simulation dashboard powered by IoT Hub, Azure Stream Analytics, Cosmos DB, and Blob Storage. Sensor data flows from IoT devices congregated into IoT Hub, through Stream Analytics, into Cosmos DB for live aggregation, and archived in Blob Storage for historical records. The dashboard, built with Dash (Plotly) and deployed on Vercel, visualizes current conditions, safety status, and hourly trends across multiple canal locations.",
     "url": "https://github.com/AliceYangAC/rideau-canal-monitoring",
     "tags": [
       "Python",
-      "Sandbox"
+      "Azure",
+      "Project"
     ],
     "private": false
   },
@@ -15,6 +34,7 @@
     "url": "https://github.com/AliceYangAC/ottawa-traffic-dashboard",
     "tags": [
       "Python",
+      "Azure",
       "Sandbox",
       "WIP"
     ],
