@@ -38,7 +38,7 @@
       "Sandbox",
       "WIP"
     ],
-    "private": false
+    "private": true
   },
   {
     "name": "AliceYangFolio",
@@ -60,7 +60,7 @@
       "Sandbox",
       "WIP"
     ],
-    "private": false
+    "private": true
   },
   {
     "name": "WhisperSRTube",
