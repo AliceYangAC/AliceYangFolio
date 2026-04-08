@@ -1,30 +1,30 @@
 {% extends "layout.html" %} {% block content %}
-<!-- Filter bar -->
 <div class="filter-bar mb-4" id="tag-filters">
   <strong>Filter by tags:</strong>
-  {% for tag in all_tags %} {% set active = tag in selected_tags %}
-  <a
-    href="/?tags={{ (selected_tags + [tag]) | join(',') if not active else (selected_tags | reject('equalto', tag) | list | join(',')) }}"
-    class="badge {% if active %}active-tag{% else %}inactive-tag{% endif %}"
-  >
+  {% for tag in all_tags %}
+  <button class="filter-btn badge inactive-tag" data-tag="{{ tag }}">
     {{ tag }}
-  </a>
-  {% endfor %} {% if selected_tags %}
-  <a href="/" class="badge bg-light text-dark border">Clear All</a>
-  {% endif %}
+  </button>
+  {% endfor %}
+
+  <button
+    id="clear-filters"
+    class="badge bg-light text-dark border"
+    style="display: none"
+  >
+    Clear All
+  </button>
 </div>
-<!-- Project cards -->
+
 <div class="card-grid">
   {% for repo in repos %}
-  <div class="card">
+  <div class="card project-card" data-tags="{{ repo.tags | join(',') }}">
     <div class="card-body d-flex flex-column">
-      <!-- Top content -->
       <div>
         <h5 class="card-title">{{ repo.name }}</h5>
         <p class="card-text">{{ repo.description }}</p>
       </div>
 
-      <!-- Bottom-aligned content -->
       <div class="mt-auto">
         <div class="mb-2">
           {% for badge in repo.badges %}
@@ -33,9 +33,7 @@
         </div>
         <div class="mb-2">
           {% for tag in repo.tags %}
-          <a href="/?tag={{ tag }}" class="badge-card bg-secondary me-1"
-            >{{ tag }}</a
-          >
+          <span class="badge-card bg-secondary me-1">{{ tag }}</span>
           {% endfor %}
         </div>
         <br />
@@ -51,4 +49,67 @@
   </div>
   {% endfor %}
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const filterBtns = document.querySelectorAll(".filter-btn");
+    const clearBtn = document.getElementById("clear-filters");
+    const cards = document.querySelectorAll(".project-card");
+    let selectedTags = new Set();
+
+    function updateUI() {
+      // 1. Update button visual states
+      filterBtns.forEach((btn) => {
+        if (selectedTags.has(btn.dataset.tag)) {
+          btn.classList.add("active-tag");
+          btn.classList.remove("inactive-tag");
+        } else {
+          btn.classList.add("inactive-tag");
+          btn.classList.remove("active-tag");
+        }
+      });
+
+      // 2. Show/hide the "Clear All" button
+      if (selectedTags.size > 0) {
+        clearBtn.style.display = "inline-block";
+      } else {
+        clearBtn.style.display = "none";
+      }
+
+      // 3. Filter the cards (must contain ALL selected tags)
+      cards.forEach((card) => {
+        // If a card has no tags, it gets an empty string, handle it gracefully
+        const cardTags = card.dataset.tags ? card.dataset.tags.split(",") : [];
+
+        // Check if every selected tag exists in the card's tags
+        const isVisible = Array.from(selectedTags).every((tag) =>
+          cardTags.includes(tag),
+        );
+
+        // Use flex so it doesn't break your existing card layout
+        card.style.display = isVisible ? "flex" : "none";
+      });
+    }
+
+    // Add click events to filter buttons
+    filterBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const tag = btn.dataset.tag;
+        // Toggle the tag in our set
+        if (selectedTags.has(tag)) {
+          selectedTags.delete(tag);
+        } else {
+          selectedTags.add(tag);
+        }
+        updateUI();
+      });
+    });
+
+    // Add click event to clear button
+    clearBtn.addEventListener("click", () => {
+      selectedTags.clear();
+      updateUI();
+    });
+  });
+</script>
 {% endblock %}

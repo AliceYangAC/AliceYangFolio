@@ -1,6 +1,20 @@
 [
   {
-    "name": "Best Buy Demo - Microservices Web App (AKS)",
+    "name": "CarClinch - AI Dealership Sales Assistant",
+    "description": "This project is an Azure-based, Terraform-deployed, AI-powered virtual sales assistant for a car dealership, built using Microsoft Foundry Service and Azure Functions. The assistant engages customers in natural language conversations to answer personalized questions about a specific vehicle and assist with scheduling test drives for over 100 Ontario dealerships. The system is designed to enhance customer experience and streamline the sales process through intelligent automation, capturing leads with minimal dealership effort until required.",
+    "url": "https://github.com/orgs/CarClinch-Dealership-Assistant/repositories",
+    "tags": [
+      "Python",
+      "JavaScript",
+      "Docker",
+      "Terraform",
+      "Azure",
+      "Project"
+    ],
+    "private": false
+  },
+  {
+    "name": "Best Buy Demo: Microservices Web App (AKS)",
     "description": "This project is an Azure-based, AKS-orchestrated, containerized microservices-based e-commerce application simulating a Best Buy storefront and admin operations. The application is built using a polyglot microservices architecture designed for cloud-native deployment. The entire system is containerized using Docker, with images hosted on Docker Hub, and orchestrated in production by deploying Azure Kubernetes Service (AKS) using ARM or Terraform IaC templates.",
     "url": "https://github.com/AliceYangAC/best-buy-microservices-web-app",
     "tags": [
@@ -18,7 +32,7 @@
     "private": false
   },
   {
-    "name": "Rideau Canal Skateway - IoT Data Stream Dashboard",
+    "name": "Rideau Canal Skateway: IoT Data Stream Dashboard",
     "description": "This project is an Azure-based, real‑time ice-skating safety simulation dashboard powered by IoT Hub, Azure Stream Analytics, Cosmos DB, and Blob Storage. Sensor data flows from IoT devices congregated into IoT Hub, through Stream Analytics, into Cosmos DB for live aggregation, and archived in Blob Storage for historical records. The dashboard, built with Dash (Plotly) and deployed on Vercel, visualizes current conditions, safety status, and hourly trends across multiple canal locations.",
     "url": "https://github.com/AliceYangAC/rideau-canal-monitoring",
     "tags": [
@@ -29,7 +43,7 @@
     "private": false
   },
   {
-    "name": "Ottawa Traffic -  RESTful API Dashboard",
+    "name": "Ottawa Traffic: RESTful API Dashboard",
     "description": "This project is an Azure based traffic ingestion system focused on real-time traffic events in Ottawa. It is designed to fetch, display (stateless through Redis) and store traffic events using Azure Functions, Azure Table Storage, and Dash. Note: This project is no longer integrated with Nokia EDA, but future integration may be considered.",
     "url": "https://github.com/AliceYangAC/ottawa-traffic-dashboard",
     "tags": [
