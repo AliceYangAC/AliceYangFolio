@@ -30,7 +30,7 @@
   },
   {
     "name": "Ottawa Traffic -  RESTful API Dashboard",
-    "description": "This project is an Azure-based traffic ingestion system focused on real-time traffic events in Ottawa. It is designed to fetch, display (stateless through Redis) and store traffic events using Azure Functions, Azure Table Storage, and Dash. Note: This project is no longer integrated with Nokia EDA, but future integration may be considered.",
+    "description": "This project is an Azure based traffic ingestion system focused on real-time traffic events in Ottawa. It is designed to fetch, display (stateless through Redis) and store traffic events using Azure Functions, Azure Table Storage, and Dash. Note: This project is no longer integrated with Nokia EDA, but future integration may be considered.",
     "url": "https://github.com/AliceYangAC/ottawa-traffic-dashboard",
     "tags": [
       "Python",
