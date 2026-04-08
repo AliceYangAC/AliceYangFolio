@@ -10,10 +10,7 @@
       type="image/jpg"
     />
     <title>{{ title or "Project Portfolio" }}</title>
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='lofi.css') }}"
-    />
+    <link rel="stylesheet" href="/lofi.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -22,11 +19,7 @@
   <body class="d-flex flex-column min-vh-100">
     <header>
       <a href="/">
-        <img
-          src="{{ url_for('static', filename='icon.jpg') }}"
-          alt="Profile Picture"
-          class="profile-pic"
-        />
+        <img src="/icon.jpg" alt="Profile Picture" class="profile-pic" />
       </a>
       <br />
       <h1 class="typewriter">
@@ -34,9 +27,9 @@
       </h1>
       <p>personal project portfolio</p>
       <a href="/contact">contact me</a>
-      <!-- <span> | </span>
+      <span> | </span>
       <a href="/art">my other portfolio</a>
-      <hr /> -->
+      <hr />
     </header>
 
     <main class="flex-grow-1">{% block content %}{% endblock %}</main>
@@ -48,9 +41,6 @@
       <p>Deployed on Vercel</p>
     </footer>
     <!-- Script for typewriter effect on introduction on load -->
-    <script
-      src="{{ url_for('static', filename='typewriter.js') }}"
-      defer
-    ></script>
+    <script src="/typewriter.js" defer></script>
   </body>
 </html>

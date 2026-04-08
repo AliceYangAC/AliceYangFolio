@@ -4,7 +4,7 @@
   {% for image_file in image_files %}
   <div class="card">
     <img
-      src="{{ url_for('static', filename=image_file) }}"
+      src="/{{ image_file }}"
       alt="{{ image_file }}"
       style="height: 500px; width: 100%; object-fit: contain; display: block"
     />

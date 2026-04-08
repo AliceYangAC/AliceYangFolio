@@ -2,7 +2,7 @@ from flask import Flask, render_template, make_response, json
 import os
 
 port = int(os.environ.get("PORT", 10000))  
-app = Flask(__name__)
+app = Flask(__name__, static_folder='public', static_url_path='/')
 app.secret_key = os.environ.get("SECRET_KEY", "dev")  
 
 # statically defined list of images (no os.listdir)
