@@ -1,6 +1,6 @@
 [
   {
-    "name": "CarClinch - AI Dealership Sales Assistant",
+    "name": "CarClinch: AI Dealership Sales Assistant",
     "description": "This project is an Azure-based, Terraform-deployed, AI-powered virtual sales assistant for a car dealership, built using Microsoft Foundry Service and Azure Functions. The assistant engages customers in natural language conversations to answer personalized questions about a specific vehicle and assist with scheduling test drives for over 100 Ontario dealerships. The system is designed to enhance customer experience and streamline the sales process through intelligent automation, capturing leads with minimal dealership effort until required.",
     "url": "https://github.com/orgs/CarClinch-Dealership-Assistant/repositories",
     "tags": [
@@ -63,18 +63,6 @@
       "Fun!"
     ],
     "private": false
-  },
-  {
-    "name": "Reddit - Social Media Scraper",
-    "description": "This project is a pipeline for scraping Reddit posts and comments with Go, and analyzing sentiment using both VADER and transformer-based models with Python. Sentiment analysis results are persisted to Azure Blob and Table Storage for future analytics implementation. (via Azurite for local development)",
-    "url": "https://github.com/AliceYangAC/social-media-scraper",
-    "tags": [
-      "Python",
-      "Golang",
-      "Sandbox",
-      "WIP"
-    ],
-    "private": true
   },
   {
     "name": "WhisperSRTube",
